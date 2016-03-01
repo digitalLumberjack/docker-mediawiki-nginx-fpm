@@ -16,6 +16,8 @@ RUN docker-php-ext-configure \
 RUN docker-php-ext-install \
   gd intl opcache mysqli
 
+RUN pear install --alldeps mail 
+
 ADD start.sh /usr/local/bin/start.sh
 
 CMD ["/usr/local/bin/start.sh"]
