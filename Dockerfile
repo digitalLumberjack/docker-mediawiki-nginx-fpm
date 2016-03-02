@@ -1,5 +1,21 @@
 FROM php:5.6-fpm
 
+ENV WIKI_NAME mywiki
+ENV WIKI_SERVER http://www.mywiki.com
+ENV WIKI_EMAIL wiki@mywiki.com
+ENV WIKI_SECRET xxxx
+ENV WIKI_UPGRADE_KEY xxxx
+ENV WIKI_LANG fr
+ENV WIKI_ADMIN_LOGIN digital
+ENV WIKI_ADMIN_PASS xxxx
+ENV DB_HOST db
+ENV DB_NAME wiki_db
+ENV DB_USER root
+ENV DB_PASS xxxx
+ENV SMTP_HOST mail.mywiki.net
+ENV SMTP_USER admin@mywiki.com
+ENV SMTP_PASSWORD xxxx
+ENV SMTP_PORT 465
 
 RUN apt-get update \
   && apt-get install -y \
